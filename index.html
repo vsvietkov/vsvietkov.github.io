@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitalii Svietkov — Backend Developer</title>
+  <meta name="description" content="Backend developer in Dnipro, Ukraine. Go, PHP, JavaScript. Available for backend roles and freelance work.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- ===== Sticky dark rail ===== -->
+  <aside class="rail">
+    <div>
+      <div class="brand">
+        <div class="brand-badge" id="brand-badge"></div>
+        <span class="brand-handle" id="brand-handle"></span>
+      </div>
+      <p class="rail-role" id="rail-role"></p>
+      <h1 class="rail-name" id="rail-name"></h1>
+      <img class="photo" id="photo" alt="">
+    </div>
+
+    <div class="meta" id="meta"></div>
+
+    <nav class="nav" id="nav"></nav>
+
+    <div class="rail-foot">
+      <div class="avail">
+        <span class="avail-dot" id="avail-dot"></span>
+        <span class="avail-text" id="avail-text"></span>
+      </div>
+      <div class="rail-links">
+        <a class="rail-link" id="link-github" target="_blank" rel="noopener">GitHub</a>
+        <a class="rail-link" id="link-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="rail-link" id="link-resume" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== Content ===== -->
+  <main class="content">
+    <div class="content-inner">
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="section-head">
+          <span class="section-slash">//</span>
+          <span class="section-title">skills &amp; stack</span>
+        </div>
+        <div class="panel" id="skills-list"></div>
+      </section>
+
+      <!-- Commercial -->
+      <section id="work">
+        <div class="section-head section-head--tight">
+          <span class="section-slash">//</span>
+          <span class="section-title">commercial work</span>
+        </div>
+        <p class="section-intro">Products and services I built and shipped for clients and employers. Most are under NDA — happy to walk through details on request.</p>
+        <div class="cards-col" id="commercial-list"></div>
+      </section>
+
+      <!-- Personal -->
+      <section id="personal">
+        <div class="section-head section-head--tight">
+          <span class="section-slash">//</span>
+          <span class="section-title">personal projects</span>
+        </div>
+        <p class="section-intro">Things I build for myself — to learn, to scratch an itch, or just for fun.</p>
+        <div class="cards-grid" id="personal-list"></div>
+      </section>
+
+      <!-- Open source -->
+      <section id="open-source">
+        <div class="section-head section-head--tight">
+          <span class="section-slash">//</span>
+          <span class="section-title">open source &amp; tools</span>
+        </div>
+        <p class="section-intro">Libraries and command-line tools I maintain on GitHub.</p>
+        <div class="cards-grid cards-grid--narrow" id="open-source-list"></div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <div class="section-head section-head--tight">
+          <span class="section-slash">//</span>
+          <span class="section-title">experience</span>
+        </div>
+        <div class="panel" id="experience-list"></div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="section-head">
+          <span class="section-slash">//</span>
+          <span class="section-title">contact</span>
+        </div>
+        <div class="contact-card">
+          <h2 class="contact-heading" id="contact-heading"></h2>
+          <p class="contact-blurb" id="contact-blurb"></p>
+          <a class="contact-btn" id="contact-btn"></a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span id="footer-copy"></span>
+        <span id="footer-location"></span>
+      </footer>
+
+    </div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
