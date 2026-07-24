@@ -40,7 +40,7 @@
 
   const aiInline = (on) => on ? `<span class="ai-badge ai-badge--inline">AI first</span>` : '';
 
-  // Full URL printed as its own line, like the company link in the experience block.
+  // Full URL, styled like the company link in the experience block.
   const projectLink = (url) => url
     ? `<a class="project-link" href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}<span class="icon">open_in_new</span></a>`
     : '';
