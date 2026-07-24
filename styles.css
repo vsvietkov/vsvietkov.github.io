@@ -201,9 +201,14 @@ section#contact { margin-bottom: 24px; }
 .project--dim { filter: grayscale(.55) opacity(.75); }
 
 .project-body { flex: 1; min-width: 0; }
-.project-titlerow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.project-titlerow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
 .project-title { font-size: 18px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); margin: 0; }
-.project-title--mb { margin-bottom: 8px; }
+.project-link { /* mirrors .exp-company-link, but prints the whole URL */
+  font-family: var(--mono); font-size: 12.5px; color: var(--blue); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 4px; max-width: 100%;
+}
+.project-link:hover { text-decoration: underline; }
+.project-link .icon { font-family: 'Material Symbols Outlined'; font-size: 14px; line-height: 1; font-variation-settings: 'wght' 400; flex-shrink: 0; }
 .project-desc { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 0 0 12px; }
 
 /* Thumbnails */
@@ -257,7 +262,6 @@ section#contact { margin-bottom: 24px; }
   text-transform: uppercase; color: var(--violet); background: rgba(124,58,237,.07);
   border: 1px solid rgba(124,58,237,.22); border-radius: 4px; padding: 2px 7px; white-space: nowrap;
 }
-.ai-badge--corner { position: absolute; top: 10px; right: 10px; z-index: 3; }
 .ai-badge--inline { flex-shrink: 0; }
 
 /* ---- Open source cards ---------------------------------------------------- */

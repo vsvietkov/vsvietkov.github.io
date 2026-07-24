@@ -130,24 +130,32 @@ const PORTFOLIO = {
 
   // ---- Personal projects --------------------------------------------------
   // Optional flags: aiFirst: true | status: 'in-progress' | status: 'upcoming'
+  // Optional `link: 'https://…'` prints the full URL in the title row.
   personal: [
     {
       title: 'Check For Me',
-      desc: 'Self-hosted habit and streak tracker with a clean REST API and a tiny web client.',
+      desc: 'Price-tracking service for online shoppers: paste any product URL, confirm which price on the page to watch, and schedule daily, weekly or monthly re-checks send an email digest the moment it drops. Targets are organised into nested wishlist groups that can be shared with others.',
       tags: ['Go', 'PHP', 'PostgreSQL', 'Laravel', 'SOA', 'AWS', 'SQS'],
       status: 'in-progress',
       aiFirst: true,
+      link: 'https://check-for-me.com'
     },
     {
-      title: 'Tree Builder (TBD)',
-      desc: 'Terminal focus timer with daily logs and a weekly summary export.',
-      tags: ['Go', 'Bubble Tea'],
+      title: 'Tree Builder (TODO)',
+      desc: 'A service for building tree-like data structures — red-black trees, binary trees and the like — through an interactive drag-and-drop canvas, in the spirit of dbdiagram and draw.io.',
+      tags: [],
       status: 'upcoming',
     },
   ],
 
   // ---- Open source & tools ------------------------------------------------
   openSource: [
+    {
+      name: 'ai-claude',
+      desc: 'Claude Code plugin marketplace with reusable rules, skills, commands and a status line.',
+      link: 'https://github.com/vsvietkov/ai-claude',
+      tags: ['Claude Code'],
+    },
     {
       name: 'golang-template',
       desc: 'Template project for Go backend applications.',

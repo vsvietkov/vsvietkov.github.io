@@ -39,7 +39,11 @@
   }
 
   const aiInline = (on) => on ? `<span class="ai-badge ai-badge--inline">AI first</span>` : '';
-  const aiCorner = (on) => on ? `<span class="ai-badge ai-badge--corner">AI first</span>` : '';
+
+  // Full URL printed as its own line, like the company link in the experience block.
+  const projectLink = (url) => url
+    ? `<a class="project-link" href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}<span class="icon">open_in_new</span></a>`
+    : '';
 
   const thumbImage = (src, alt) => {
     const useContain = /\.(svg|webp)$/i.test(src);
@@ -167,14 +171,17 @@
     const overlay = item.status === 'upcoming' ? `<div class="card-overlay"></div>` : '';
     return `
     <div class="card project${dim}">
-      ${aiCorner(item.aiFirst)}
       ${overlay}
       <div class="thumb thumb--initials">
         <span class="thumb-initials">${esc(initials(item.title))}</span>
         ${statusBadge(item.status)}
       </div>
       <div class="project-body">
-        <h3 class="project-title project-title--mb">${esc(item.title)}</h3>
+        <div class="project-titlerow">
+          <h3 class="project-title">${esc(item.title)}</h3>
+          ${aiInline(item.aiFirst)}
+          ${projectLink(item.link)}
+        </div>
         <p class="project-desc">${esc(item.desc)}</p>
         <div class="chip-row">${chips(item.tags)}</div>
       </div>
