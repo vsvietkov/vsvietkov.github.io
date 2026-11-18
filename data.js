@@ -61,7 +61,7 @@ const PORTFOLIO = {
     },
     {
       group: 'Data & infrastructure',
-      items: ['PostgreSQL', 'MySQL', 'Redis', 'Docker', 'AWS', 'SQS', 'DynamoDB', 'UNIX'],
+      items: ['PostgreSQL', 'MySQL', 'Redis', 'Docker', 'AWS', 'SQS', 'DynamoDB', 'Grafana', 'UNIX'],
     },
     {
       group: 'AI & tooling',
@@ -75,14 +75,16 @@ const PORTFOLIO = {
   // `nda: false`, which shows an initials placeholder (like personal projects).
   commercial: [
     {
+      title: 'MLR Review Assistant API',
+      desc: 'Backend for a review tool that gives pharma MLR (medical, legal, regulatory) reviewers a structured view of promotional materials submitted for review, such as emails, presentations and web pages. I built the Go service from scratch: a stateless REST API with OpenAPI docs that authenticates reviewers against a shared Redis session cache and calls four internal services over signed cross-service requests. It submits AI extractions asynchronously, checks whether links still resolve, and renders PDF page thumbnails in an in-process SQS background worker. Local development runs entirely against WireMock and LocalStack, and the service ships to AWS ECS through a CI pipeline with a test-coverage gate.',
+      tags: ['Go', 'REST', 'Redis', 'AWS', 'SQS', 'Docker'],
+      aiFirst: true,
+      nda: true,
+    },
+    {
       title: 'Pharmaceutical Document Ingestion & Validation Platform',
-      desc: 'A document intelligence pipeline that ingests approved pharmaceutical marketing materials from Veeva    \n' +
-          '  Vault, extracts structured knowledge artifacts using AI, and routes them through a multi-stage          \n' +
-          '  human-in-the-loop (HITL) validation workflow. Features a parallel double-validation engine with         \n' +
-          '  automatic F1 agreement scoring and escalation logic, a correction UI for annotators to review and fix AI\n' +
-          '  extractions, and an admin suite for entity management, audit browsing, rollback, and annotator          \n' +
-          '  performance analytics.',
-      tags: ['Go', 'PostgreSQL', 'AWS'],
+      desc: 'A document intelligence pipeline that ingests approved pharmaceutical marketing materials from Veeva Vault, extracts structured knowledge artifacts with AI, and routes them through a multi-stage human-in-the-loop (HITL) validation workflow before publishing them to downstream consumers. I worked on the Go ingestion backend and its GraphQL API: the document state machine, a parallel double-validation engine with F1 agreement scoring and escalation, a Postgres-backed background-job queue with retries and dead-lettering, a cron scheduler, an immutable audit log, cross-service JWT auth and Slack report notifications. I also built the aggregated metrics schema behind a set of Grafana dashboards (lead times, escalation rate, first-pass acceptance, entity-type accuracy, annotator capacity), and set up the devcontainer and GitHub Actions CI.',
+      tags: ['Go', 'GraphQL', 'PostgreSQL', 'Grafana', 'AWS', 'Docker', 'GitHub Actions (CI/CD)'],
       aiFirst: true,
       nda: true,
     },
@@ -232,6 +234,7 @@ const PORTFOLIO = {
     'UNIX': 'linux',
     'Git': 'git',
     'Observability': 'grafana',
+    'Grafana': 'grafana',
     'ClickHouse': 'clickhouse',
     'SQLite': 'sqlite',
     'HTMX': 'htmx',
